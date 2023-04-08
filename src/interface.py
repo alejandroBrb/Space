@@ -3,7 +3,6 @@ import pygame
 
 from src.media_control import load_images
 import sys
-import random
 from src.constants import *
 
 
@@ -28,7 +27,7 @@ class Window(Text):
         pygame.init()
         self.screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
         pygame.display.set_caption("Space")
-        self.background_image = load_images('images/fondo.jpg')
+        self.background_image = load_images('assets/images/fondo.jpg')
         pygame.mouse.set_visible(False)
         self.screen.blit(self.background_image, (0, 0))
 

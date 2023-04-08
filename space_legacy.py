@@ -20,7 +20,7 @@ class Nave(pygame.sprite.Sprite):
     def __init__(self, y):
         pygame.sprite.Sprite.__init__(self)
 
-        self.image = carga_imagenes("images/baseshipb.ico", True)
+        self.image = carga_imagenes("assets/images/baseshipb.ico", True)
         self.rect = self.image.get_rect()
 
         self.rect.centery = y
@@ -41,7 +41,7 @@ class Disparo(pygame.sprite.Sprite):
 
     def __init__(self, posicion):
         pygame.sprite.Sprite.__init__(self)
-        self.image = carga_imagenes("images/disparo.png")
+        self.image = carga_imagenes("assets/images/disparo.png")
         self.rect = self.image.get_rect()
         self.rect.center = posicion
 
@@ -58,7 +58,7 @@ class Disparo_malo(pygame.sprite.Sprite):
 
     def __init__(self, posicion):
         pygame.sprite.Sprite.__init__(self)
-        self.image = carga_imagenes("images/disparo.png")
+        self.image = carga_imagenes("assets/images/disparo.png")
         self.rect = self.image.get_rect()
         self.rect.center = posicion
 
@@ -80,9 +80,9 @@ class Malo_random(pygame.sprite.Sprite):
         self.gsprite = grupo_sprite
         self.eleccion = random.randint(0, 100)
         if self.eleccion <= 50:
-            self.image = carga_imagenes("images/mysteryb.ico", True)
+            self.image = carga_imagenes("assets/images/mysteryb.ico", True)
         if 100 >= self.eleccion > 50:
-            self.image = carga_imagenes("images/mysterya.ico", True)
+            self.image = carga_imagenes("assets/images/mysterya.ico", True)
         self.rect = self.image.get_rect()
         self.rect.centerx = random.randint(100, 900)
         self.rect.y = 0
@@ -115,7 +115,7 @@ class Explosion(pygame.sprite.Sprite):
 
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
-        self.image = carga_imagenes("images/explosion.png", True)
+        self.image = carga_imagenes("assets/images/explosion.png", True)
         self.rect = self.image.get_rect()
         self.rect.centery = y
         self.rect.centerx = x
@@ -151,7 +151,7 @@ class Ventanas(Text):
         pygame.init()
         self.screen = pygame.display.set_mode((ancho, alto))
         pygame.display.set_caption("Space")
-        self.background_image = carga_imagenes('images/fondo.jpg')
+        self.background_image = carga_imagenes('assets/images/fondo.jpg')
         pygame.mouse.set_visible(False)
         self.screen.blit(self.background_image, (0, 0))
 
@@ -228,10 +228,10 @@ def main():
 
     screen = pygame.display.set_mode((ancho, alto))
     pygame.display.set_caption("Space")
-    sonido_dis = carga_musica('sounds/shoot.wav')
-    sonido_dism = carga_musica('sounds/ufo_highpitch.wav')
-    sonido_exp = carga_musica('sounds/explosion.wav')
-    background_image = carga_imagenes('images/fondo.jpg')
+    sonido_dis = carga_musica('assets/sounds/shoot.wav')
+    sonido_dism = carga_musica('assets/sounds/ufo_highpitch.wav')
+    sonido_exp = carga_musica('assets/sounds/explosion.wav')
+    background_image = carga_imagenes('assets/images/fondo.jpg')
     pygame.mouse.set_visible(False)
 
     grupo_sprite = pygame.sprite.RenderClear()
@@ -252,10 +252,10 @@ def main():
 
     screen = pygame.display.set_mode((ancho, alto))
     pygame.display.set_caption("Space")
-    sonido_dis = carga_musica('sounds/shoot.wav')
-    sonido_dism = carga_musica('sounds/ufo_highpitch.wav')
-    sonido_exp = carga_musica('sounds/explosion.wav')
-    background_image = carga_imagenes('images/fondo.jpg')
+    sonido_dis = carga_musica('assets/sounds/shoot.wav')
+    sonido_dism = carga_musica('assets/sounds/ufo_highpitch.wav')
+    sonido_exp = carga_musica('assets/sounds/explosion.wav')
+    background_image = carga_imagenes('assets/images/fondo.jpg')
     pygame.mouse.set_visible(False)
 
     if ini == 1:

@@ -4,12 +4,14 @@ import pygame
 from src.media_control import load_images
 from src.constants import *
 
+PATH_IMAGES = "assets/images"
+
 
 class Spaceship(pygame.sprite.Sprite):
     def __init__(self, y):
         pygame.sprite.Sprite.__init__(self)
 
-        self.image = load_images("images/baseshipb.ico", True)
+        self.image = load_images(PATH_IMAGES + "/baseshipb.ico", True)
         self.rect = self.image.get_rect()
 
         self.container_width = WINDOW_WIDTH
@@ -30,7 +32,7 @@ class Shot(pygame.sprite.Sprite):
 
     def __init__(self, position):
         pygame.sprite.Sprite.__init__(self)
-        self.image = load_images("images/disparo.png")
+        self.image = load_images(PATH_IMAGES + "/disparo.png")
         self.rect = self.image.get_rect()
         self.rect.center = position
 

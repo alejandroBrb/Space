@@ -4,6 +4,8 @@ from src.media_control import load_images
 import random
 from src.constants import *
 
+PATH_IMAGES = "assets/images"
+
 
 class Enemy(pygame.sprite.Sprite):
 
@@ -14,9 +16,9 @@ class Enemy(pygame.sprite.Sprite):
         self.g_sprite = g_sprite
         self.respawn = random.randint(0, 100)
         if self.respawn <= 50:
-            self.image = load_images("images/mysteryb.ico", True)
+            self.image = load_images(PATH_IMAGES + "/mysteryb.ico", True)
         if 100 >= self.respawn > 50:
-            self.image = load_images("images/mysterya.ico", True)
+            self.image = load_images(PATH_IMAGES + "/mysterya.ico", True)
         self.rect = self.image.get_rect()
         self.rect.centerx = random.randint(100, 900)
         self.rect.y = 0
@@ -47,7 +49,7 @@ class EnemyShot(pygame.sprite.Sprite):
 
     def __init__(self, position):
         pygame.sprite.Sprite.__init__(self)
-        self.image = load_images("images/disparo.png")
+        self.image = load_images(PATH_IMAGES + "/disparo.png")
         self.rect = self.image.get_rect()
         self.rect.center = position
 
@@ -62,7 +64,7 @@ class Explosion(pygame.sprite.Sprite):
 
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
-        self.image = load_images("images/explosion.png", True)
+        self.image = load_images(PATH_IMAGES + "/explosion.png", True)
         self.rect = self.image.get_rect()
         self.rect.centery = y
         self.rect.centerx = x

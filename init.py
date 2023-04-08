@@ -23,10 +23,10 @@ def main():
 
     screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
     pygame.display.set_caption("Space")
-    sound_shot = load_music('sounds/shoot.wav')
-    sound_enemy = load_music('sounds/ufo_highpitch.wav')
-    sound_explosion = load_music('sounds/explosion.wav')
-    background_image = load_images('images/fondo.jpg')
+    sound_shot = load_music('assets/sounds/shoot.wav')
+    sound_enemy = load_music('assets/sounds/ufo_highpitch.wav')
+    sound_explosion = load_music('assets/sounds/explosion.wav')
+    background_image = load_images('assets/images/fondo.jpg')
     pygame.mouse.set_visible(False)
 
     g_sprite = pygame.sprite.RenderClear()

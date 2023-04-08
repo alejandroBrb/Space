@@ -30,3 +30,8 @@ python3 space_legacy
 ```bash
 deactivate
 ```
+
+## Images
+![Into](static/init.png)
+![Game](static/game.png)
+
